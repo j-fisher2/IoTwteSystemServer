@@ -1,0 +1,63 @@
+{
+  "garbage_bins": {
+    "bin_<bin_id>": {
+      "location": "123 Main St",
+      "bin_type": "regular",
+      "last_collected": "2025-02-08T10:00:00Z"
+    }
+  },
+  "sensor_data": {
+    "sensor_<sensor_id>": {
+      "module_id": "<id>",
+      "fill_level": 80,
+      "temperature": 35,
+      "weight": 50,
+      "timestamp": "2025-02-08T09:45:00Z",
+      "sensor_status": "Active"
+    }
+  },
+  "temperature_sensors": {
+    "temp_sensor_<sensor_id>": {
+      "id": "<id>",
+      "temperature": 35,
+      "timestamp": "2025-02-08T09:45:00Z",
+      "sensor_status": "Active"
+    }
+  },
+  "weight_sensors": {
+    "weight_sensor_<sensor_id>": {
+      "id": "<id>",
+      "weight": 35,
+      "timestamp": "2025-02-08T09:45:00Z",
+      "sensor_status": "Active"
+    }
+  },
+  "garbage_trucks": {
+    "truck_<truck_id>": {
+      "driver_name": "Alice Johnson",
+      "assigned_bins": ["bin_<bin_id_1>", "bin_<bin_id_2>"],
+      "status": "On Route",
+      "last_updated": "2025-02-08T09:30:00Z"
+
+    }
+  },
+  "residents": {
+    "resident_<resident_id>": {
+      "name": "John Doe",
+      "address": "123 Main St",
+      "phone_number": "+1234567890",
+      "email": "john.doe@example.com",
+      "notifications_opt_in": true
+    }
+  },
+  "alerts": {
+    "alert_<alert_id>": {
+      "bin_id": "bin_<bin_id>",
+      "sensor_id": "sensor_<sensor_id>",
+      "resident_id": "resident_<resident_id>",
+      "alert_type": "Bin Full",
+      "message": "Your garbage bin at 123 Main St is 95% full. Consider distributing garbage.",
+      "timestamp": "2025-02-08T10:00:00Z"
+    }
+  }
+}
