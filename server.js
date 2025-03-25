@@ -5,7 +5,8 @@ import { sendSMSNotification } from "./utils.js";
 import fs from "fs";
 import path from "path";
 
-const MAX_ALLOWABLE_BIN_WEIGHT = 20; //lbs
+const MAX_ALLOWABLE_BIN_WEIGHT = 2; //lbs
+const CALIBRATED_BIN_HEIGHT = 45.08;
 
 const serviceAccount = JSON.parse(
   fs.readFileSync(path.resolve("service_account.json"), "utf8"),
@@ -96,6 +97,7 @@ export const notifyResident = async (data) => {
 };
 
 app.post("/fill-level", async (req, res) => {
+  console.log(req.body);
   try {
     const documentData = {
       ...req.body,
